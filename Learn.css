@@ -1,0 +1,373 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;   /*it control width globally*/
+    /* font-family: 'Texturina', serif; */
+    /* background-color:lightblue; */
+    
+    
+}
+header{
+    width:100%;
+    height:48px;
+    background-color:black;;
+    /* background-image: url('');
+    background-repeat: /* to make image look good*/
+    /* background-size: cover;      */
+
+}
+nav{
+    width:100%;
+    height:48px;
+    background-color:whitesmoke;
+    color: mintcream;
+    display:flex;    /* use to make content side by side */
+    justify-content: space-between;  /* use to make space in between content*/
+    align-items: center;
+    position: fixed;    /* to make fixed navbar */
+    
+}
+
+nav .logo{
+    background-color:whitesmoke;
+    width:20%;
+    text-align: center;
+    height: 28px;
+    color:red;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+    /* cursor: pointer; */
+}
+
+nav .menu{
+    width:45%;
+    height: 28px;
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    /* text-transform: uppercase; */
+    padding-top: 4px;
+    position: relative;
+    
+    
+}
+
+
+nav .menu a{
+    /* width:11.25px; */
+
+    text-decoration: none;    /*to remove by default line*/
+    color:black;
+    font-weight: bold;
+    position: relative;
+}
+/* to use under line on menu use this */
+nav .menu a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 78%;
+    width: 0%;
+    height: 2px;
+    background-color:black ;
+    transition: all 0.5s linear;
+
+}
+
+nav .menu a:hover:before{
+    width:100%;
+    background-color:blue;
+
+}
+
+nav .menu a:first-child{
+    color:green;
+}
+
+nav .menu a:hover{
+    /* background-color: lime; */
+    color:darkslategrey;
+}
+
+nav .menu a:active {
+    /* background-color: hotpink; */
+    color: red;
+}
+
+#main{
+    background-color:#020c1b;
+    width: 100%;
+    height: 95vh;
+    color:lightsteelblue;
+    /* to make anything in center use this three lines */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+/*start of sidebar section*/
+
+.sidebar{
+    height: 330px;
+    width:60px;
+    background-color: #fff;
+    border-radius:5px;
+    position:absolute;
+    top:50%;
+    right:50px;
+    transform:translateY(-50%);
+}
+.icon-box{
+    width:50px;
+    height:50px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px auto;
+
+}
+
+.side-text{
+    min-width:0px;
+    height: 100%;
+    background-color: #f44336;
+    margin-right:5px;
+    line-height: 0;
+    color:#fff;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 5px 0  0 5px;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+.icon{
+    min-width: 50px;
+    height: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.icon .fa{
+    font-size: 20px;
+    color:#f44336;
+    line-height: 50px;
+
+
+}
+.icon-box:hover .icon{
+    background-color: #f44336;
+
+}
+
+.icon-box:hover .icon .fa{
+    color:#fff;
+
+}
+.icon-box:hover .side-text{
+    min-width: 140px;
+
+}
+
+/* end of sidebar section */
+
+
+
+/* 
+main-section{
+
+} */
+main-section h2{
+    font-size: 30px;font-weight: 200;letter-spacing: 3px;color: #64ffda;
+
+}
+main-section h1{
+    font-size: 95px;font-weight: 200;letter-spacing: 3px;
+    /* text-shadow: 1px 1px 1px grey; */
+    /* margin-bottom: 10px; */      /* to make space between two lines*/
+    
+}
+main-section h3{
+    font-size: 55px;font-weight: 200;letter-spacing: 3px;
+
+}
+
+main-section h1{
+    color:#ccd6f6 ;
+}
+
+.change_content:after{
+    content:'';
+    animation: changetext 10s infinite linear;
+    color:red;
+}
+
+/* when u use animation use @keyframes */
+@keyframes changetext{
+    0%{content: "Programmer";}
+    25%{content: "Coder";}
+    50%{content: "web";}
+    75%{content: "Designer";}
+    100%{content: "Engineer";}
+}
+
+#about{
+    background-color:#020c1b;;
+    width:100%;
+    height:70vh;
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+    text-align: left;
+    color:gray;
+    font-size: 18px;letter-spacing: 1px;line-height: 210%;
+    padding-left:30%;
+    padding-top: 8%;
+
+}
+.image-section{
+    float: right;
+    padding-right: 40px;
+    padding-bottom: 50px;
+
+}
+
+#contact{
+    background-color:whitesmoke;
+    width: 100%;
+    height: 89vh;
+    color:darkslategray;
+
+}
+.contact-container{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.contact-box{
+    background-color: #fff;
+    display: flex;
+}
+
+.contact-left{
+    flex-basis: 60%;
+    padding:40px 60px;
+}
+
+
+.contact-right{
+    flex-basis: 40%;
+    padding:40px 60px;
+    background-color:white;
+    color:black;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    
+}
+.input-row .input-group{
+    flex-basis: 45%;
+
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea{
+    width: 100%;
+    border:1px solid #ccc;
+    outline: none;
+    padding: 10px;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+    color:#1c00b5;
+}
+
+
+Button{
+    background-color:#1c00b5 ;
+    width:100px;
+    border:none;
+    outline:none;
+    color:white;
+    height:35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+}
+
+.contact-left h3{
+    color:#1c00b5;
+    font-weight:600;
+    margin-bottom: 30px;
+
+
+}
+
+.contact-right h3{
+    color:black;
+    font-weight:600;
+    margin-bottom: 30px;
+
+
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top:20px;
+}
+
+
+
+
+
+
+#skills{
+    background-color:white;
+    width: 100%;
+    height: 95vh;
+
+}
+.container{
+    width: 100%;
+    background-color:white;
+}
+
+.skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:black;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.devops {width: 65%; background-color: #f44336;}
+.python {width: 40%; background-color: #808080;}
+.mysql {width: 70%; background-color: lightskyblue;}
+
+
+#footer{
+    background-color:lightskyblue;
+    width: 100%;
+    height: 50vh;
+}
